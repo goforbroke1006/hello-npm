@@ -1,5 +1,5 @@
 {
-  "name": "hello-npm",
+  "name": "wildfowl",
   "version": "1.0.0",
   "description": "My first module for NodeJS",
   "main": "index.js",
