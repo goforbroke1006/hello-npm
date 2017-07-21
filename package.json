@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/goforbroke1006/hello-npm.git"
+    "url": "git+https://github.com/goforbroke1006/hello-npm-wildfowl.git"
   },
   "keywords": [
     "hello",
@@ -20,7 +20,7 @@
   "author": "Sergey Cherkesov <go.for.broke1006@gmail.com> (https://vk.com/go_for_broke)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/goforbroke1006/hello-npm/issues"
+    "url": "https://github.com/goforbroke1006/hello-npm-wildfowl/issues"
   },
-  "homepage": "https://github.com/goforbroke1006/hello-npm#readme"
+  "homepage": "https://github.com/goforbroke1006/hello-npm-wildfowl#readme"
 }
