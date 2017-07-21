@@ -1,0 +1,26 @@
+{
+  "name": "hello-npm",
+  "version": "1.0.0",
+  "description": "My first module for NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"You should write tests\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goforbroke1006/hello-npm.git"
+  },
+  "keywords": [
+    "hello",
+    "world",
+    "npm",
+    "module",
+    "package"
+  ],
+  "author": "Sergey Cherkesov <go.for.broke1006@gmail.com> (https://vk.com/go_for_broke)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/goforbroke1006/hello-npm/issues"
+  },
+  "homepage": "https://github.com/goforbroke1006/hello-npm#readme"
+}
