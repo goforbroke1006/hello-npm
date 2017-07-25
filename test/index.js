@@ -1,7 +1,3 @@
-/**
- * Created by SCherk01 on 25.07.17.
- */
-
 var should = require('chai').should(),
     wildfowl = require('../index'),
     isTMNT = wildfowl.isTMNT;

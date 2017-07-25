@@ -1,7 +1,3 @@
-/**
- * Created by SCherk01 on 21.07.17.
- */
-
 module.exports = {
     isTMNT: function (yourName) {
         if (typeof yourName != 'string') return false;
