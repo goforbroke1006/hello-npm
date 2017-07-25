@@ -1,10 +1,10 @@
 {
   "name": "wildfowl",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "My first module for NodeJS",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"You should write tests\""
+    "test": "make test"
   },
   "repository": {
     "type": "git",
@@ -15,12 +15,17 @@
     "world",
     "npm",
     "module",
-    "package"
+    "package",
+    "wildfowl"
   ],
   "author": "Sergey Cherkesov <go.for.broke1006@gmail.com> (https://vk.com/go_for_broke)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/goforbroke1006/hello-npm-wildfowl/issues"
   },
-  "homepage": "https://github.com/goforbroke1006/hello-npm-wildfowl#readme"
+  "homepage": "https://github.com/goforbroke1006/hello-npm-wildfowl#readme",
+  "devDependencies": {
+    "chai": "^4.1.0",
+    "mocha": "^3.4.2"
+  }
 }
