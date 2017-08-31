@@ -1,4 +1,4 @@
-# Hello NPM - Wildfowl module
+# Wildfowl (NPM module)
 
 ### What is it for?
 
