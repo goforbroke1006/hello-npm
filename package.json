@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/goforbroke1006/hello-npm-wildfowl.git"
+    "url": "git+https://github.com/goforbroke1006/npm-wildfowl.git"
   },
   "keywords": [
     "hello",
