@@ -1,6 +1,6 @@
 {
   "name": "wildfowl",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "My first module for NodeJS",
   "main": "index.js",
   "scripts": {
