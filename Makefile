@@ -7,9 +7,5 @@ test:
  .PHONY: test
 
 push:
-	git add .
-	@echo $(COMMIT_MESSAGE)
-	git commit -m $COMMIT_MESSAGE
-	git push
 	echo 'Push by '`npm whoami`
 	npm publish
