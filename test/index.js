@@ -83,7 +83,10 @@ describe("#parseUrl", function () {
         obj.params["f"]["proizvoditel"].should.deep.equal([4046947, 4046953, 4046948]);
         obj.params["f"]["ssd"].should.deep.equal([8, 512]);
     });
+});
 
+
+describe("#string prototype upgrade", function () {
     it("Sample # 2", function () {
         var url = 'https://some.site.com:9999/shop/monobloki_i_kompyutery/kompyutery/?category_id=26145&collection=&disc=&ncitems=&source_filter=&f%5Bname%5D=&f%5Bprice%5D%5B0%5D=8990&f%5Bprice%5D%5B1%5D=236190&f%5Bproizvoditel%5D%5B0%5D=4046947&f%5Bproizvoditel%5D%5B1%5D=4046953&f%5Bproizvoditel%5D%5B2%5D=4046948&f%5Bchastota_processora_pc%5D%5B0%5D=1&f%5Bchastota_processora_pc%5D%5B1%5D=22&f%5Bhdd%5D%5B0%5D=32&f%5Bhdd%5D%5B1%5D=6000&f%5Bssd%5D%5B0%5D=8&f%5Bssd%5D%5B1%5D=512&f%5Bthunderbolt_connector%5D=&f%5Bfirewire_connector%5D=&f%5Bwifi%5D=&f%5Bbluetooth%5D=&category_main_id=0&maker_id=0&model_id=0&category_acs_id=0&ncitems_ajax=1';
         var obj = url.parseUrl();
@@ -98,5 +101,17 @@ describe("#parseUrl", function () {
         var obj = url.parseUrl();
 
         should.equal(obj, null);
+    });
+
+    it("Sample # 4", function () {
+        var url = 'hello world';
+        var res = url.startsWith('hello');
+        should.equal(res, true);
+    });
+
+    it("Sample # 5", function () {
+        var url = '_hello world';
+        var res = url.startsWith('hello');
+        should.equal(res, false);
     });
 });

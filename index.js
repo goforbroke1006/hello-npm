@@ -107,6 +107,14 @@ module.exports = {
     objectCanBeArray: objectCanBeArray,
 };
 
-String.prototype.parseUrl = function () {
-    return parseUrl(this)
-};
+if (!String.prototype.parseUrl) {
+    String.prototype.parseUrl = function () {
+        return parseUrl(this)
+    };
+}
+
+if (!String.prototype.startsWith) {
+    String.prototype.startsWith = function (term) {
+        return this.substr(0, term.length) === term;
+    };
+}
