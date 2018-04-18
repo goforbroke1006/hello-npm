@@ -1,19 +1,20 @@
 /**
  * Parse URL string to object
  * @param {String} url
- * @returns {{schema: string, host: string, path: string, query: string, params: Array}}
+ * @returns null|{{schema: string, host: string, path: string, query: string, params: Array}}
  */
 var parseUrl = function (url) {
+    if (url.indexOf('://') === -1 || url.indexOf(" ") >= 0)
+        return null;
+
     var obj = {
-        schema: "",
+        schema: url.substr(0, url.indexOf('://')),
         host: "",
         port: "",
         path: "",
         query: "",
         params: {}
     };
-
-    obj.schema = url.substr(0, url.indexOf('://'));
 
     var p = url.indexOf("://");
     var tmp1 = url.substr(p + 3);
@@ -29,16 +30,7 @@ var parseUrl = function (url) {
     obj.path = tmp1.substr(pss, tmp1.indexOf("?") - pss || null);
 
     url.substr(url.indexOf("?") + 1).split("&").forEach(function (value, index) {
-
-        // value.replace(/%5B/g, "[").replace(/%5D/g, "]")
         value = value.replace(/%5D%5B/g, ".").replace(/%5B/g, ".").replace(/%5D/g, "");
-
-        // var p = value.indexOf(".") >= 0 ? value.indexOf("[") : value.indexOf("=");
-        // var name = value.substr(0, p);
-        // obj.params[name] = "";
-
-        // console.log(obj.params);
-
         parseParam(obj.params, value);
     });
 
@@ -57,9 +49,6 @@ var objectCanBeArray = function (obj) {
             return false;
         }
     }
-    // Object.keys(obj).forEach(function (key, index) {
-    //     if (key !== index.toString()) return false;
-    // });
     return true;
 };
 
@@ -116,4 +105,8 @@ module.exports = {
     parseUrl: parseUrl,
     isNumber: isNumber,
     objectCanBeArray: objectCanBeArray,
+};
+
+String.prototype.parseUrl = function () {
+    return parseUrl(this)
 };
